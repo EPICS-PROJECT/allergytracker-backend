@@ -45,7 +45,7 @@
 		  display: block;
 		  width: 100%;
 		}
-		.form button {
+		/* .form button {
 			font-size: 20px;
 			border-radius: 4px;
 		  outline: 0;
@@ -60,7 +60,106 @@
 		}
 		.form button:hover,.form button:active,.form button:focus {
 		  background: #00ACB1;
-		}
+		} */
+/* !-------------------------------- */
+
+
+/* CSS */
+.form2 .button {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.form2 .button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.form2 .button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.form2 .button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+/* !------------------------------------ */
+/* !------------------------------------ */
+/* !------------------------------------ */
+
+
+.form button {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #54bdc1;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 3rem;
+  padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.form button:hover,
+.form button:focus {
+  background-color: #3a8b8e;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.form button:hover {
+  transform: translateY(-1px);
+}
+
+.form button:active {
+  background-color: #0e6b6e;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+/* !------------------------------------ */
 		.form .header {
 			font-size: 24px;
 			font-weight: bold;
@@ -191,6 +290,20 @@
 		}
 		.form2 .register-form2 {
 		  display: none;
+		}
+
+		.form input{
+		margin: 2vh auto;
+        /* width: 30%; */
+        border-radius: 5px;
+		background-color: #ffffff;
+        border: 3px solid #5fdee2;
+        box-shadow: 5px 5px 15px rgba(186, 126, 126, 0.5);
+        font-size: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #066669;
+        padding: 10px;
+        text-align: center;
 		}
 /* ------------------------------------------------------ */
 
@@ -573,13 +686,18 @@
 			<br/>
 			
 			
-			<div id="loginWithUsernameDiv" class="form center" style="display:none; width: 500px">
-				<label class="header">Login With User Name</label>
+			<div id="loginWithUsernameDiv" class="form center" style="display:none; width: 470px; height: 300px; padding: 45px; border-radius: 16px;box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; margin-top: 3em;">
+				<label class="header">Please enter your credentials here </label>
 
 				<div id="usernameDiv">
-					<label>User name</label>
-					<input type="text" id="username" size="35" value="admin"/>
-					<button id="loginBtn">Login</button>
+					<div style="margin-top: 4em;">
+						<label >Please enter your username here :</label>
+						<input type="text" id="username" size="35" value="admin"/>
+						<br>
+						<button id="loginBtn">Login</button>
+					</div>
+					<!-- <hr style="stroke: #3a8b8e00; color: #4CAF50; ">
+					<span style="font-size: small; color: #3a8b8e;">Made by team 143</span> -->
 				</div>
 				<br/>
 				<div id="otpDiv" style="display:none">
