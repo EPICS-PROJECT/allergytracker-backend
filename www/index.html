@@ -118,22 +118,60 @@
 		  display: block;
 		  width: 100%;
 		}
-		.form2 button {
-			font-size: 20px;
-			border-radius: 4px;
-		  outline: 0;
-		  background: #4CAF50;
-		  border: 0;
-		  padding: 10px;
-		  color: #FFFFFF;
+		
+/* --------------------------------------------- */
+.form2 button {
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 5px;
+  border-width: 0;
+  height: 58px;
+  width: 20em;
+  margin: 5px;
 
-		  -webkit-transition: all 0.3 ease;
-		  transition: all 0.3 ease;
-		  cursor: pointer;
-		}
-		.form2 button:hover,.form2 button:active,.form2 button:focus {
-		  background: #00ACB1;
-		}
+  padding-left: 16px;
+  padding-right: 16px;
+
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono",monospace;
+ 
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s,transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow,transform;
+  font-size: 18px;
+}
+
+.form2 button:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.form2 button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.form2 button:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+/* --------------------------------------------- */
+
 		.form2 .header {
 			font-size: 24px;
 			font-weight: bold;
@@ -519,15 +557,17 @@
 <body onload="initPage()">
  	<div class="center">
 		<div id="unAuthenticated">
-			<div class="form center" style="max-width:100%; text-align:left;">
+			<div class="form2 center" style="max-width:100%; text-align:left;">
 				<img src="img/logo2.png" />
 				<div style="float:right; text-align:right">
+				<div style="margin: 18px;">
 					<button id="loginWithUsernameBtn">Login With User Name</button>
-					<br/>
-					<br/>
 					<button id="loginWithFaceRecognitionBtn">Login With Face Recognition</button>
+				</div>
+				<div style="margin: 18px;">
+					<span> Please remember to verify your email address for AWS Simple Email Service (SES) to be able to receive OTP emails</span>
+				</div>
 					<br/>
-					<span><img src="img/warning-24.png" /> &nbsp; Please remember to verify your email address for AWS Simple Email Service (SES) to be able to receive OTP emails</span>
 				</div>	
 			</div>
 			<br/>
